@@ -26,6 +26,49 @@ void fn(){
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+do{
+	int menuPick = getMenuChoice();
+	string = fileName, userFile;
+
+	swtich(menuPick){
+	case 1:
+	break;
+	case 2:
+		//cout << "Please choose a file:\n";
+		
+	break;
+	case 3:
+		//cout << "Please choose a file:\n";
+
+		//cout << "Enter a new name for the edited file: "
+		//cin >> userFile;
+	break;
+	case 4:
+	break;
+	case 0;
+	break;
+	default:
+		cout << "Please input a valid option.\n";
+	break;
+	}
+
+
+
+}
+
+	while(menuPick != 0);
+	return 0;
+}
+
+
+int getMenuChoice(){
+
+	int userChoice;
+
+	cout << "PT50's AUDIO PROCESSOR\n1. Read Files\n2. Modify Metadata\n3. Process File\n4. Create CSV Display of All Files\n0. Exit Program\n";
+	
+	cin >> userChoice;
+
+return userChoice;
 }
