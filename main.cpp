@@ -1,6 +1,7 @@
 /** @file */
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -32,7 +33,7 @@ int main() {
 
 do{
 	int menuPick = getMenuChoice();
-	string = fileName, userFile;
+	string fileName, userFile;
 
 	swtich(menuPick){
 	case 1:
@@ -48,6 +49,10 @@ do{
 		//cin >> userFile;
 	break;
 	case 4:
+		ofstream csv;
+		csv.open("AudioFiles.csv");
+		//csv << (put the file metadata)
+		csv.close();
 	break;
 	case 0;
 	break;
