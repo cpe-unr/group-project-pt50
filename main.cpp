@@ -36,25 +36,43 @@ do{
 	string fileName, userFile;
 
 	swtich(menuPick){
-	case 1:
+	case 1: //Reads Files
 	break;
-	case 2:
-		//cout << "Please choose a file:\n";
+	case 2: //Modifies MetaData
+		/*
+		cout << "Please choose a file:\n";
+		cin >> fileName; 
+		// Here we can maybe pass in fileName into the modifying function
 		
+		*/
 	break;
-	case 3:
-		//cout << "Please choose a file:\n";
+	case 3: //Processing Files
+		/*
+		cout << "Please choose a file:\n";
 
 		//cout << "Enter a new name for the edited file: "
-		//cin >> userFile;
+		cin >> userFile;
+		
+		for(int i = 0; i < size; i++){
+		if(userFile == **I think we put an array/vector with all the file names? array[i]**){
+			cout << "A file already exists with the same name, please choose another name.\n";
+		}
+		else {
+			wav.writeFile(userFile);
+
+		}
+
+
+		}
+		*/
 	break;
-	case 4:
+	case 4: //Create CSV
 		ofstream csv;
 		csv.open("AudioFiles.csv");
 		//csv << (put the file metadata)
 		csv.close();
 	break;
-	case 0;
+	case 0; //Exits
 	break;
 	default:
 		cout << "Please input a valid option.\n";
