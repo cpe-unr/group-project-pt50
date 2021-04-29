@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <cmath>
 
-#include "Processor.h"
+#include "processor.h"
 
 template <typename T>
 class Normalization: public Processor<T>
