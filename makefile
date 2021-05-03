@@ -4,8 +4,8 @@ main: noisegate.o processor.o echo.o normalization.o main.cpp
 noisegate.o: noisegate.h
 	g++ -c noisegate.h
 
-processor.o: processor.cpp processor.h
-	g++ -c processor.cpp
+processor.o: processor.h
+	g++ -c processor.h
 
 echo.o: echo.h
 	g++ -c echo.h
