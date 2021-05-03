@@ -1,0 +1,12 @@
+digraph "Wav"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wav",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_Chunk" ];
+  Node2 [label="dataChunk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc5/structdataChunk.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fmt" ];
+  Node3 [label="FMT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d2c/structFMT.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wave_Header" ];
+  Node4 [label="wavHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d81/structwavHeader.html"];
+}

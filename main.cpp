@@ -1,4 +1,9 @@
 /** @file */
+/**
+ * @author Jason Ha, John Montesa, Graysen Yonano
+ * @date May 2, 2021
+*/
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -29,6 +34,14 @@ void fn(){
 
 }
 
+/**
+ * Main implementation of processor.
+ * Reads into audio files and prompts the user with a menu.
+ * Reads the users choice and ...
+ * 
+ *
+ * @return
+ */
 int main() {
 
 do{
@@ -88,9 +101,14 @@ do{
 }
 
 
+
+/**
+ * Displays user menu.
+ */
 int getMenuChoice(){
 
 	int userChoice;
+	//!< What the user picks
 
 	cout << "PT50's AUDIO PROCESSOR\n1. Read Files\n2. Modify Metadata\n3. Process File\n4. Create CSV Display of All Files\n0. Exit Program\n";
 	
