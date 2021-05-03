@@ -7,12 +7,28 @@
 
 #include "processor.h"
 
+/**
+ * Template class for Normalization.
+ */
+
 template <typename T>
 class Normalization: public Processor<T>
 {
 	int threshold;
+	//!< This determines the threshold of the wav file...
 public:
+
+	/**
+	 * The Normilizer function ....
+	 * @param threshold - takes threshold of file and ...
+ 	*/
 	Normilizer(int threshold);
+
+	/**
+	 * ProcessBuffer is ....
+	 * @param buffer - ...
+	 * @param bufferSize - ...	
+	*/
 	void processBuffer(T* buffer, int bufferSize);
 };
 template <typename T> Normilizer <T>::Normilizer(int threshold): threshold(threshold){}

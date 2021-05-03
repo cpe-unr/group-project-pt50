@@ -8,16 +8,30 @@
 #include <cmath>
 
 #include "processor.h"
-
 using namespace std; 
+
+/**
+ * The template class for noise gate.
+ */
 
 template <typename T>
 class noiseGate : public Processor<T>
 {
 	int threshold;
+	//!< This variable determines the threshold of the gate.
 
 public:
+	/**
+	 * NoiseGate function ....
+	 * @param threshold - the threshold of the audio file
+	*/
 	NoiseGate(int threshold);
+
+	/**
+	 * ProcessBuffer is ....
+	 * @param buffer - ...
+	 * @param bufferSize - ...	
+	*/
 	void processBuffer(T* buffer, int bufferSize);
 
 };

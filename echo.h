@@ -9,12 +9,29 @@
 
 using namespace std; 
 
+/**
+ * Template class for Echo.
+ */
+
+
 template <typename T>
 class Echo : public Processor<T>
 {
 	int delay;
+	//!< This determines the delay of the echo.
+
 public:
+	/**
+	 * This function gives the audio file an echo...
+	 * @param delay - this will pass in the delay length of the echo.
+	*/
 	Echo(int delay)
+
+	/**
+	 * ProcessBuffer is ....
+	 * @param buffer - ...
+	 * @param bufferSize - ...	
+	*/
 	void processBuffer(T* buffer, int bufferSize);
 };
 
