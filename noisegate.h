@@ -35,7 +35,7 @@ public:
 	void processBuffer(T* buffer, int bufferSize);
 
 };
-template <typename T> noiseGate <T>::NoiseGate(int threshold): threshold(threshold){}
+template <typename T> NoiseGate <T>::NoiseGate(int threshold): threshold(threshold){}
 template <typename T> void NoiseGate <T>::processBuffer(T* buffer, int bufferSize)
 {
 	T zeroPoint;
