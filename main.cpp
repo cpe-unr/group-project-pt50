@@ -194,45 +194,4 @@ int main(int argc, char* const argv[]){
     }
         }
     }
-    
-
-	
-		/*
-		cout << "Please choose a file:\n";
-		cin >> fileName; 
-		// Here we can maybe pass in fileName into the modifying function
-		
-		*
-	case 4: //Create CSV
-		ofstream csv;
-		csv.open("AudioFiles.csv");
-		//csv << (put the file metadata)
-		csv.close();
-	break;
-	case 0; //Exits
-	break;
-	default:
-		cout << "Please input a valid option.\n";
-	break;
-	}
-
-
-
-}
-
-	while(menuPick != 0);
-	return 0;
-}
-
-
-int getMenuChoice(){
-
-	int userChoice;
-
-	cout << "PT50's AUDIO PROCESSOR\n1. Read Files\n2. Modify Metadata\n3. Process File\n4. Create CSV Display of All Files\n0. Exit Program\n";
-	
-	cin >> userChoice;
-
-return userChoice;
-         */
 }
