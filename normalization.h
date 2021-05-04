@@ -19,15 +19,15 @@ class Normalization: public Processor<T>
 public:
 
 	/**
-	 * The Normilizer function ....
-	 * @param threshold - takes threshold of file and ...
+	 * The Normilizer function sets sounds above or below the threshold to be louder or quieter
+	 * @param threshold - takes the user threshold for the max or min sound they want
  	*/
 	Normilizer(int threshold);
 
 	/**
-	 * ProcessBuffer is ....
-	 * @param buffer - ...
-	 * @param bufferSize - ...	
+	 * ProcessBuffer is gets the buffer and the buffer size
+	 * @param buffer - is the audio file type (8 bit or 16 bit)
+	 * @param bufferSize - how big the audio file is (how many bytes)	
 	*/
 	void processBuffer(T* buffer, int bufferSize);
 };
