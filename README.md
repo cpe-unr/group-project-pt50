@@ -20,4 +20,4 @@ This class is a template with one attribute:
 
 It has a constuctor:`Echo`
 
-The `processBuffer` function in the Echo class should pass in an audio file and give it an echo with a given delay.
+The `processBuffer` function in the Echo class should pass in an audio file and give it an echo of a given delay.
