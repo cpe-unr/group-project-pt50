@@ -1,4 +1,8 @@
 /** @file */
+/**
+ * @author Jason Ha, John Montesa, Graysen Yonano
+ * @date May 2, 2021
+ */
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -35,6 +39,15 @@ using namespace std;
 void fn(){
 
 }
+
+/**
+ * Main implementation of processor.
+ * Reads into audio files and prompts the user with a menu.
+ * Gives the user the option to modify/add metadata, process files, and export files.
+ * Uses command line arguments to pass in the file.
+ * 
+ * @return
+ */
 
 int main(int argc, char* const argv[]){
 
