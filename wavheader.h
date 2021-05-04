@@ -35,6 +35,15 @@ struct FMT{
 };
 
 /**
+ * metadataHeader is ....
+ */
+struct metadataHeader{
+    char ID_list[NUM_BYTES]; //LIST
+    char ID_info[NUM_BYTES]; //INFO
+    int list_size; //size of chunk in bytes
+};
+
+/**
  * SubChunkData...
  */
 struct SubChunkData: public dataChunk{
