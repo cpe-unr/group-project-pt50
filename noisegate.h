@@ -29,8 +29,8 @@ public:
 
 	/**
 	 * ProcessBuffer is gets the buffer and the bufferSize
-	 * @param buffer - ...
-	 * @param bufferSize - ...	
+	 * @param buffer - the audio file
+	 * @param bufferSize - gets the size of the audio file, how many digits there are. 	
 	*/
 	void processBuffer(T* buffer, int bufferSize);
 
