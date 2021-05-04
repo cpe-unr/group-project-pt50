@@ -17,33 +17,33 @@
 class Wav{
 protected:
     int bufferSize_data;
-	//!< This variable .....
+	//!< This variable is the buffer size
     unsigned char** buffers = NULL;
-	//!< This variable .....
+	//!< This variable is the buffer
     std::vector <SubChunkData> metadata;
-	//!< This variable .....
+	//!< This variable is the metadata
     wavHeader wave_Header;
-	//!< This variable .....
+	//!< This variable is a waveheader object
     dataChunk data_Chunk;
-	//!< This variable .....
+	//!< This variable datachunk object
     FMT fmt;
-	//!< This variable .....
+	//!< This variable is an fmt object
 public:
     wavHeader getwavHeader();
 	/**
-	 * getBuffer....
+	 * getBuffer
 	*/
     unsigned char *getBuffer(int);
 	/**
-	 * getBufferSize....
+	 * getBufferSize
 	*/
     int getBufferSize() const;
 	/**
-	 * getBitDepth....
+	 * getBitDepth
 	*/
     int getBitDepth();
 	/**
-	 * getNumChannels....
+	 * getNumChannels
 	*/
     int getNumChannels();
 	/**
