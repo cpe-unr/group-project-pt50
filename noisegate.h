@@ -22,13 +22,13 @@ class noiseGate : public Processor<T>
 
 public:
 	/**
-	 * NoiseGate function ....
+	 * NoiseGate function Removes sound that is above a certain threshold
 	 * @param threshold - the threshold of the audio file
 	*/
 	NoiseGate(int threshold);
 
 	/**
-	 * ProcessBuffer is ....
+	 * ProcessBuffer is gets the buffer and the bufferSize
 	 * @param buffer - ...
 	 * @param bufferSize - ...	
 	*/
