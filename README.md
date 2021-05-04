@@ -4,8 +4,7 @@
 ### Overview
 This program will read through audio files provided by the user and prompt allow them to edit the METADATA of the file or process the file with an effect (Echo, Normalization, or a Noise Gate). The program supports mono and stereo .WAV files as well as 8-bit and 16-bit .WAV files. The user is then able to overwrite an existing file's METADATA, or save a new file with the added processing. The user can also create a .CSV file of all the audio files' METADATAs.
 
-
-### Design Overview
+### Project Architecture
 (place finished UML DIAGRAM here)
 
 
