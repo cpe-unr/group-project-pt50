@@ -6,7 +6,7 @@
 #define WAVEHEADER_H
 
 /**
- * wavHeader....
+ * wavHeader Data structure
  */
 struct wavHeader{
     char riff_header[4]; //!<RIFF
@@ -15,7 +15,7 @@ struct wavHeader{
 };
 
 /**
- * dataChucnk is....
+ * dataChucnk data structure
  */
 struct dataChunk{
     char fmt_header[4]; //!<DATA
@@ -23,7 +23,7 @@ struct dataChunk{
 };
 
 /**
- * FMT is ....
+ * FMT is data structure
  */
 struct FMT{
     int sample_rate; //!<sample rate
@@ -35,7 +35,7 @@ struct FMT{
 };
 
 /**
- * metadataHeader is ....
+ * metadataHeader data structure
  */
 struct metadataHeader{
     char ID_list[NUM_BYTES]; //LIST
@@ -44,10 +44,10 @@ struct metadataHeader{
 };
 
 /**
- * SubChunkData...
+ * SubChunkData data structure
  */
 struct SubChunkData: public dataChunk{
-    char *buffer; //!<buffer...
+    char *buffer; //!<buffer of file
 };
 
 #endif //WAVEHEADER_H
