@@ -29,21 +29,24 @@ protected:
     FMT fmt;
 	//!< This variable is an fmt object
 public:
+	/**
+	 * getwavHeader
+	 */
     wavHeader getwavHeader();
 	/**
-	 * getBuffer
+	 * gets the buffer
 	*/
     unsigned char *getBuffer(int);
 	/**
-	 * getBufferSize
+	 * gets the buffer size
 	*/
     int getBufferSize() const;
 	/**
-	 * getBitDepth
+	 * gets bit depth
 	*/
     int getBitDepth();
 	/**
-	 * getNumChannels
+	 * get number of channels
 	*/
     int getNumChannels();
 	/**
