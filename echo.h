@@ -22,15 +22,15 @@ class Echo : public Processor<T>
 
 public:
 	/**
-	 * This function gives the audio file an echo...
+	 * This function gives the audio file an echo
 	 * @param delay - this will pass in the delay length of the echo.
 	*/
 	Echo(int delay)
 
 	/**
-	 * ProcessBuffer is ....
-	 * @param buffer - ...
-	 * @param bufferSize - ...	
+	 * ProcessBuffer is gets the buffer and buffer size
+	 * @param buffer - this determines type of audio file (8 bit or 16 bit)
+	 * @param bufferSize - this determines how big the audio file is (how many bytes)	
 	*/
 	void processBuffer(T* buffer, int bufferSize);
 };
