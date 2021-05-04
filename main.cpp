@@ -1,12 +1,14 @@
 /** @file */
-/**
- * @author Jason Ha, John Montesa, Graysen Yonano
- * @date May 2, 2021
-*/
-
 #include <iostream>
 #include <string>
 #include <fstream>
+
+#include "processor.h"
+#include "wavheader.h"
+#include "wav.h"
+#include "normalization.h"
+#include "noisegate.h"
+#include "echo.h"
 
 using namespace std;
 
@@ -34,51 +36,173 @@ void fn(){
 
 }
 
-/**
- * Main implementation of processor.
- * Reads into audio files and prompts the user with a menu.
- * Reads the users choice and ...
- * 
- *
- * @return
- */
-int main() {
+int main(int argc, char* const argv[]){
 
-do{
-	int menuPick = getMenuChoice();
-	string fileName, userFile;
+    if (argc != 2){
+        std::cout << "Correct Usage:" << std::endl;
+        std::cout << argv[0] << "filename" << std::endl;
+        return 0;
+    }
+    
+    int userChoice, userChoice2, userChoice3, userChoice4, userChoice5;
+    int YN, YN2, YN3, YN4, YN5, YN6, YN7, YN8, YN9;
+    string fileName, userFile;
+    
+    do{
+        std::cout << "*** PT50 Audio File Management System ***" << std::endl;
+        std::cout << "[1] Modify/Add Metadata" << std::endl;
+        std::cout << "[2] Process Files" << std::endl;
+        std::cout << "[3] Export Files" << std::endl;
+        std::cout << "[0] EXIT" << std::endl;
+        std::cout << "What would you like to do?" << std::endl;
+        std::cin >> userChoice;
+        
+        switch(userChoice){
+            case 1:
+                std::cout << "Creating Metadata" << std::endl;
+                break;
+            case 2:
+                //file processing
+                cout << "How would you like to process your files?" << endl;
+                cout << "[1] Normalization" << endl;
+                cout << "[2] Noise Gate" << endl;
+                cout << "[3] Echo" << endl;
+                cout << "Select one: " << endl;
+                cin >> userChoice2;
+            
+                switch(userChoice2){
+                    case 1:
+                    cout << "Creating Normalization, if you would like to process another way: enter 1 for YES and 2 for NO" << endl;
+                    cin >> YN;
+                        if(YN == 1){
+                            cout << "How would you like to process your files?" << endl;
+                            cout << "[1] Noise Gate" << endl;
+                            cout << "[2] Echo" << endl;
+                            cout << "Select one: " << endl;
+                            cin >> userChoice3;
 
-	swtich(menuPick){
-	case 1: //Reads Files
-	break;
-	case 2: //Modifies MetaData
+                            switch(userChoice3){
+                                case 1:
+                                    cout << "Creating Noise Gate, would you like an Echo file? (enter 1 for YES and 2 for NO)" << endl;
+                                    cin >> YN2;
+                                    if(YN2 == 1){
+                                        cout << "Creating Echo" << endl;
+                                        break;
+                                    }else if(YN2 == 2){
+                                        break;
+                                    }
+                                case 2:
+                                    cout << "Creating Echo, would you like a Noise Gate file? (enter 1 for YES and 2 for NO)" << endl;
+                                    cin >> YN3;
+                                    if(YN3 == 1){
+                                        cout << "Creating Noise Gate" << endl;
+                                        break;
+                                    }else if(YN3 == 2){
+                                        break;
+                                    }
+                            }
+                        }else if(YN == 2){
+                                break;
+                        }
+                        
+                    case 2:
+                    cout << "Creating Noise Gate, if you would like to process another way: enter 1 for YES and 2 for NO" << endl;
+                    cin >> YN4;
+                        if(YN4 == 1){
+                            cout << "How would you like to process your files?" << endl;
+                            cout << "[1] Normalization" << endl;
+                            cout << "[2] Echo" << endl;
+                            cout << "Select one: " << endl;
+                            cin >> userChoice4;
+                            
+                            switch(userChoice4){
+                                case 1:
+                                    cout << "Creating Normalization, would you like an Echo file? (enter 1 for YES and 2 for NO)" << endl;
+                                    cin >> YN5;
+                                    
+                                    if(YN5 == 1){
+                                        cout << "Creating Echo" << endl;
+                                        break;
+                                    }
+                                    else if(YN5 == 2){
+                                        break;
+                                    }
+                                case 2:
+                                    cout << "Creating Echo, would you like a Normalization file? (enter 1 for YES and 2 for NO)" << endl;
+                                    cin >> YN6;
+                                    
+                                    if(YN6 == 1){
+                                        cout << "Creating Normalization" << endl;
+                                        break;
+                                    }
+                                    else if(YN6 == 2){
+                                        break;
+                                    }
+                            }
+                        }else if(YN4 == 2){
+                            break;
+                        }
+                    case 3:
+                    cout << "Creating Echo, if would you like to process another way: enter 1 for YES and 2 for NO" << endl;
+                    cin >> YN7;
+                        if(YN7 == 1){
+                            cout << "How would you like to process your files?" << endl;
+                            cout << "[1] Normalization" << endl;
+                            cout << "[2] Noise Gate" << endl;
+                            cout << "Select one: " << endl;
+                            cin >> userChoice5;
+
+                            switch(userChoice5){
+                                case 1:
+                                    cout << "Creating Normalization, would you like a Noise Gate file? (enter 1 for YES and 2 for NO)" << endl;
+                                    cin >> Yn8;
+                                    
+                                    if(YN8 == 1){
+                                        cout << "Creating Noise Gate" << endl;
+                                        break;
+                                }
+                                else if(YN8 == 2){
+                                    break;
+                                }
+                            case 2:
+                                cout << "Creating Noise Gate, would you like a Normalization file? (enter 1 for YES and 2 for NO)" << endl;
+                                cin >> YN9;
+                                    
+                                    if(YN9 == 1){
+                                        cout << "Creating Normalization" << endl;
+                                        break;
+                                    }else if(YN9 == 2){
+                                        break;
+                                    }
+                            }
+                        }
+                }
+
+                cout << "Processing Files..." << endl;
+                break;
+            case 3:
+                //exportFiles function
+                cout << "Exporting Files..." << endl;
+                break;
+            case 0:
+                break;
+            default:
+                cout << "Not a valid option, please select another option!" << endl;
+                break;
+            }
+        }while(userChoice != 0);
+    }
+        }
+    }
+    
+
+	
 		/*
 		cout << "Please choose a file:\n";
 		cin >> fileName; 
 		// Here we can maybe pass in fileName into the modifying function
 		
-		*/
-	break;
-	case 3: //Processing Files
-		/*
-		cout << "Please choose a file:\n";
-
-		//cout << "Enter a new name for the edited file: "
-		cin >> userFile;
-		
-		for(int i = 0; i < size; i++){
-		if(userFile == **I think we put an array/vector with all the file names? array[i]**){
-			cout << "A file already exists with the same name, please choose another name.\n";
-		}
-		else {
-			wav.writeFile(userFile);
-
-		}
-
-
-		}
-		*/
-	break;
+		*
 	case 4: //Create CSV
 		ofstream csv;
 		csv.open("AudioFiles.csv");
@@ -101,18 +225,14 @@ do{
 }
 
 
-
-/**
- * Displays user menu.
- */
 int getMenuChoice(){
 
 	int userChoice;
-	//!< What the user picks
 
 	cout << "PT50's AUDIO PROCESSOR\n1. Read Files\n2. Modify Metadata\n3. Process File\n4. Create CSV Display of All Files\n0. Exit Program\n";
 	
 	cin >> userChoice;
 
 return userChoice;
+         */
 }
