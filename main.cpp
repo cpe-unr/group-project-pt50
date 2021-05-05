@@ -3,6 +3,9 @@
  * @author Jason Ha, John Montesa, Graysen Yonano
  * @date May 2, 2021
  */
+
+// PT 50
+// CS 202: Semester Project
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -86,8 +89,8 @@ int main(int argc, char* const argv[]){
                 switch(userChoice2){
                     case 1:
                     cout << "Creating Normalization, if you would like to process another way: enter 1 for YES and 2 for NO" << endl;
-                    cin >> YN;
-                        if(YN == 1){
+                    cin >> UC;
+                        if(UC == 1){
                             cout << "How would you like to process your files?" << endl;
                             cout << "[1] Noise Gate" << endl;
                             cout << "[2] Echo" << endl;
@@ -97,31 +100,31 @@ int main(int argc, char* const argv[]){
                             switch(userChoice3){
                                 case 1:
                                     cout << "Creating Noise Gate, would you like an Echo file? (enter 1 for YES and 2 for NO)" << endl;
-                                    cin >> YN2;
-                                    if(YN2 == 1){
+                                    cin >> UC2;
+                                    if(UC2 == 1){
                                         cout << "Creating Echo" << endl;
                                         break;
-                                    }else if(YN2 == 2){
+                                    }else if(UC2 == 2){
                                         break;
                                     }
                                 case 2:
                                     cout << "Creating Echo, would you like a Noise Gate file? (enter 1 for YES and 2 for NO)" << endl;
-                                    cin >> YN3;
-                                    if(YN3 == 1){
+                                    cin >> UC3;
+                                    if(UC3 == 1){
                                         cout << "Creating Noise Gate" << endl;
                                         break;
-                                    }else if(YN3 == 2){
+                                    }else if(UC3 == 2){
                                         break;
                                     }
                             }
-                        }else if(YN == 2){
+                        }else if(UC == 2){
                                 break;
                         }
                         
                     case 2:
                     cout << "Creating Noise Gate, if you would like to process another way: enter 1 for YES and 2 for NO" << endl;
-                    cin >> YN4;
-                        if(YN4 == 1){
+                    cin >> UC4;
+                        if(UC4 == 1){
                             cout << "How would you like to process your files?" << endl;
                             cout << "[1] Normalization" << endl;
                             cout << "[2] Echo" << endl;
@@ -131,34 +134,34 @@ int main(int argc, char* const argv[]){
                             switch(userChoice4){
                                 case 1:
                                     cout << "Creating Normalization, would you like an Echo file? (enter 1 for YES and 2 for NO)" << endl;
-                                    cin >> YN5;
+                                    cin >> UC5;
                                     
-                                    if(YN5 == 1){
+                                    if(UC5 == 1){
                                         cout << "Creating Echo" << endl;
                                         break;
                                     }
-                                    else if(YN5 == 2){
+                                    else if(UC5 == 2){
                                         break;
                                     }
                                 case 2:
                                     cout << "Creating Echo, would you like a Normalization file? (enter 1 for YES and 2 for NO)" << endl;
-                                    cin >> YN6;
+                                    cin >> UC6;
                                     
-                                    if(YN6 == 1){
+                                    if(UC6 == 1){
                                         cout << "Creating Normalization" << endl;
                                         break;
                                     }
-                                    else if(YN6 == 2){
+                                    else if(UC6 == 2){
                                         break;
                                     }
                             }
-                        }else if(YN4 == 2){
+                        }else if(UC4 == 2){
                             break;
                         }
                     case 3:
                     cout << "Creating Echo, if would you like to process another way: enter 1 for YES and 2 for NO" << endl;
-                    cin >> YN7;
-                        if(YN7 == 1){
+                    cin >> UC7;
+                        if(UC7 == 1){
                             cout << "How would you like to process your files?" << endl;
                             cout << "[1] Normalization" << endl;
                             cout << "[2] Noise Gate" << endl;
@@ -168,36 +171,35 @@ int main(int argc, char* const argv[]){
                             switch(userChoice5){
                                 case 1:
                                     cout << "Creating Normalization, would you like a Noise Gate file? (enter 1 for YES and 2 for NO)" << endl;
-                                    cin >> Yn8;
+                                    cin >> UC8;
                                     
-                                    if(YN8 == 1){
+                                    if(UC8 == 1){
                                         cout << "Creating Noise Gate" << endl;
                                         break;
                                 }
-                                else if(YN8 == 2){
+                                else if(UC8 == 2){
                                     break;
                                 }
                             case 2:
                                 cout << "Creating Noise Gate, would you like a Normalization file? (enter 1 for YES and 2 for NO)" << endl;
-                                cin >> YN9;
+                                cin >> UC9;
                                     
-                                    if(YN9 == 1){
+                                    if(UC9 == 1){
                                         cout << "Creating Normalization" << endl;
                                         break;
-                                    }else if(YN9 == 2){
+                                    }else if(UC9 == 2){
                                         break;
                                     }
                             }
                         }
                 }
-
-                cout << "Processing Files..." << endl;
                 break;
             case 3:
                 //exportFiles function
                 cout << "Exporting Files..." << endl;
                 break;
             case 0:
+                //program exits
                 break;
             default:
                 cout << "Not a valid option, please select another option!" << endl;
