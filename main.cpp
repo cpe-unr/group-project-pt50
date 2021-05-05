@@ -61,7 +61,7 @@ int main(int argc, char* const argv[]){
     }
     
     int userChoice, userChoice2, userChoice3, userChoice4, userChoice5;
-    int YN, YN2, YN3, YN4, YN5, YN6, YN7, YN8, YN9;
+    int UC, UC2, UC3, UC4, UC5, UC6, UC7, UC8, UC9;
     string fileName, userFile;
     
     do{
